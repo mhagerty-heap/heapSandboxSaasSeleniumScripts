@@ -23,7 +23,7 @@ print("Heap envID = " + heapEnv)
 randomPersonaSelector = random.randint(0,999) # used to select from the 1000 fake personas within heapCustomerPersonas.json
 with open('heapCustomerPersonas.json', 'r') as f: # open file from same dir where script runs
   customerData = json.load(f)
-# set customer variables based on data imported from heapCustomerPersonas.json 
+# set customer variables based on data imported from heapCustomerPersonas.json
 customerName = customerData[randomPersonaSelector]['customerName']
 print("customerName = " + customerName)
 customerEmail = customerData[randomPersonaSelector]['customerEmail']
@@ -40,13 +40,13 @@ randomSaasFunnelPlan = random.randint(1,4) # value for determining if success or
 print("randomSaaSFunnelPlan = " + str(randomSaasFunnelPlan) + ", 1=conversion, 2-4=failure")
 
 # set UTM Codes for starting page
-startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/signin.html?sessionReplay=true&sessionReplayName=saasAppJourneyWithActions"
+startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/signin.html?sessionReplay=true&sessionReplayName=customerCrudFeatureJourney"
 
 # set Agent String for session
 # if randomTrafficPatternSelection is 0 through 9 set user agent code accordingly
 userAgentString = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 
-# start webdriver 
+# start webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
@@ -163,7 +163,7 @@ if randomSaasFunnelPlan != 1:
     crudNewItemDescription.click()
     time.sleep(3)
     print("Clicked crudNewItemDescription")
-else:    
+else:
     #Enter Test name into Description Field if this is a conversion
     crudNewItemDescription = driver.find_element(By.CSS_SELECTOR, '#description')
     time.sleep(1)

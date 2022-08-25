@@ -24,7 +24,7 @@ randomPersonaSelector = random.randint(0,999) # used to select from the 1000 fak
 with open('heapProspectPersonas.json', 'r') as f: # open file from same dir where script runs
   customerData = json.load(f)
 
-# set customer variables based on data imported from heapProspectPersonas.jsom  
+# set customer variables based on data imported from heapProspectPersonas.jsom
 customerName = customerData[randomPersonaSelector]['customerName']
 print("customerName = " + customerName)
 customerEmail = customerData[randomPersonaSelector]['customerEmail']
@@ -81,12 +81,12 @@ randomSubscribe = random.randint(1,15) # value for determining if subscribe happ
 print("randomSubsribe = " + str(randomSubscribe) + " (15 = conversion)")
 
 # what's the starting URL, in this instance, it's the blog home page
-startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/blog-grids.html?utm_source=Blog&utm_medium=referral&utm_campaign=NewBlogPosts&utm_content=PlayBlog&sessionReplay=true&sessionReplayName=NoSubscribe_moreClicks"
+startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/blog-grids.html?utm_source=Blog&utm_medium=referral&utm_campaign=NewBlogPosts&utm_content=PlayBlog&sessionReplay=true&sessionReplayName=marketingBlogJourneyWithRandomSubscribe"
 
 # set Agent String for session
 userAgentString = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 
-# start webdriver 
+# start webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
@@ -156,37 +156,37 @@ if (randomSubscribe == 15):
     webdriver.ActionChains(driver).move_to_element(signUpNameField).perform()
     driver.find_element(By.ID, "signUpNameField").send_keys(customerName)
     print("On SignUp Page, enter Name Field")
-    time.sleep(2)   
+    time.sleep(2)
     signUpEmailField = driver.find_element(By.ID, 'signUpEmailField')
     webdriver.ActionChains(driver).move_to_element(signUpEmailField).perform()
     driver.find_element(By.ID, "signUpEmailField").send_keys(customerEmail)
     print("On SignUp Page, enter Email Field")
-    time.sleep(2)   
+    time.sleep(2)
     signUpPasswordField = driver.find_element(By.ID, 'signUpPasswordField')
     webdriver.ActionChains(driver).move_to_element(signUpPasswordField).perform()
     driver.find_element(By.ID, "signUpPasswordField").send_keys(customerPassword)
     print("On SignUp Page, enter Password Field")
-    time.sleep(2)   
+    time.sleep(2)
     signUpStreetAddressField = driver.find_element(By.ID, 'signUpStreetAddressField')
     webdriver.ActionChains(driver).move_to_element(signUpStreetAddressField).perform()
     driver.find_element(By.ID, "signUpStreetAddressField").send_keys(customerStreetAddress)
     print("On SignUp Page, enter Street Address Field")
-    time.sleep(2)   
+    time.sleep(2)
     signUpZipCodeField = driver.find_element(By.ID, 'signUpZipCodeField')
     webdriver.ActionChains(driver).move_to_element(signUpZipCodeField).perform()
     driver.find_element(By.ID, "signUpZipCodeField").send_keys(customerPostalCode)
     print("On SignUp Page, enter Postal Code")
-    time.sleep(2)   
+    time.sleep(2)
     signUpMobileNumberField = driver.find_element(By.ID, 'signUpMobileNumberField')
     webdriver.ActionChains(driver).move_to_element(signUpMobileNumberField).perform()
     driver.find_element(By.ID, "signUpMobileNumberField").send_keys(customerMobileNumber)
     print("On SignUp Page, enter Mobile Number")
-    time.sleep(2)   
+    time.sleep(2)
     creditCardNumberField = driver.find_element(By.ID, 'creditCardNumberField')
     webdriver.ActionChains(driver).move_to_element(creditCardNumberField).perform()
     driver.find_element(By.ID, "creditCardNumberField").send_keys(customerCreditCardNumber)
     print("On SignUp Page, enter Credit Card Number")
-    time.sleep(2)   
+    time.sleep(2)
     creditCardExpirationField = driver.find_element(By.ID, 'creditCardExpirationField')
     webdriver.ActionChains(driver).move_to_element(creditCardExpirationField).perform()
     driver.find_element(By.ID, "creditCardExpirationField").send_keys("4/26")

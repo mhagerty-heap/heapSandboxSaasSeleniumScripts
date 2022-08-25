@@ -24,7 +24,7 @@ randomPersonaSelector = random.randint(0,999) # used to select from the 1000 fak
 with open('heapProspectPersonas.json', 'r') as f: # open file from same dir where script runs
   customerData = json.load(f)
 
-# set customer variables based on data imported from heapProspectPersonas.json  
+# set customer variables based on data imported from heapProspectPersonas.json
 customerName = customerData[randomPersonaSelector]['customerName']
 print("customerName = " + customerName)
 customerEmail = customerData[randomPersonaSelector]['customerEmail']
@@ -74,25 +74,25 @@ print("offlineSubscriptionDescription = " + offlineSubscriptionDescription)
 # set UTM Codes for starting page
 #if randomTrafficPatternSelection is 0 through 9 set UTM code accordingly
 if(randomUTMSelector.endswith("1")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation" 
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("2")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("3")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Facebook&utm_medium=display&utm_campaign=SanFranciscoGeo&utm_content=SaaSDemoNew&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Facebook&utm_medium=display&utm_campaign=SanFranciscoGeo&utm_content=SaaSDemoNew&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("4")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Twitter&utm_medium=display&utm_campaign=SanFranciscoGeo&utm_content=SaaSDemoNew&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Twitter&utm_medium=display&utm_campaign=SanFranciscoGeo&utm_content=SaaSDemoNew&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("5")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Blog&utm_medium=referral&utm_campaign=NewArticles&utm_content=BeTheBestSaaS&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Blog&utm_medium=referral&utm_campaign=NewArticles&utm_content=BeTheBestSaaS&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("6")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=LinkedIn&utm_medium=display&utm_campaign=SaaSForExecutives&utm_content=ExecutiveContentSeries1&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=LinkedIn&utm_medium=display&utm_campaign=SaaSForExecutives&utm_content=ExecutiveContentSeries1&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("7")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Google&utm_medium=cpc&utm_campaign=SponsortedContent&utm_content=NewProductFeatures&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Google&utm_medium=cpc&utm_campaign=SponsortedContent&utm_content=NewProductFeatures&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("8")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=EmailList1&utm_medium=email&utm_campaign=UpgradePath&utm_content=TryNewFeatures&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=EmailList1&utm_medium=email&utm_campaign=UpgradePath&utm_content=TryNewFeatures&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 elif(randomUTMSelector.endswith("9")):
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Affiliate&utm_medium=referral&utm_campaign=SaaSForExecutives&utm_content=ExecutiveContentSeries1&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html?utm_source=Affiliate&utm_medium=referral&utm_campaign=SaaSForExecutives&utm_content=ExecutiveContentSeries1&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 else:
-	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html&sessionReplay=true&sessionReplayName=Subscribe_featuresHesitation"
+	startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/main.html&sessionReplay=true&sessionReplayName=marketingSubscribeFeaturesHesitation"
 
 # set user agent string
 userAgentString = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
@@ -214,7 +214,7 @@ pagesDropDownMenu = driver.find_element(By.ID, 'pagesDropDownMenu')
 # click on pages dropdown menu to open it for next click
 webdriver.ActionChains(driver).move_to_element(pagesDropDownMenu).perform()
 time.sleep(2)
-# find features page from pages dropdown and click it. 
+# find features page from pages dropdown and click it.
 pagesFeaturesLink = driver.find_element(By.ID, 'pagesFeaturesLink')
 webdriver.ActionChains(driver).move_to_element(pagesFeaturesLink).perform()
 time.sleep(2)
@@ -279,37 +279,37 @@ signUpNameField = driver.find_element(By.ID, 'signUpNameField')
 webdriver.ActionChains(driver).move_to_element(signUpNameField).perform()
 driver.find_element(By.ID, "signUpNameField").send_keys(customerName)
 print("Step20: On SignUp Page, enter Name Field")
-time.sleep(2)	
+time.sleep(2)
 signUpEmailField = driver.find_element(By.ID, 'signUpEmailField')
 webdriver.ActionChains(driver).move_to_element(signUpEmailField).perform()
 driver.find_element(By.ID, "signUpEmailField").send_keys(customerEmail)
 print("Step21: On SignUp Page, enter Email Field")
-time.sleep(2)	
+time.sleep(2)
 signUpPasswordField = driver.find_element(By.ID, 'signUpPasswordField')
 webdriver.ActionChains(driver).move_to_element(signUpPasswordField).perform()
 driver.find_element(By.ID, "signUpPasswordField").send_keys(customerPassword)
 print("Step22: On SignUp Page, enter Password Field")
-time.sleep(2)	
+time.sleep(2)
 signUpStreetAddressField = driver.find_element(By.ID, 'signUpStreetAddressField')
 webdriver.ActionChains(driver).move_to_element(signUpStreetAddressField).perform()
 driver.find_element(By.ID, "signUpStreetAddressField").send_keys(customerStreetAddress)
 print("Step23: On SignUp Page, enter Street Address Field")
-time.sleep(2)	
+time.sleep(2)
 signUpZipCodeField = driver.find_element(By.ID, 'signUpZipCodeField')
 webdriver.ActionChains(driver).move_to_element(signUpZipCodeField).perform()
 driver.find_element(By.ID, "signUpZipCodeField").send_keys(customerPostalCode)
 print("Step24: On SignUp Page, enter Postal Code")
-time.sleep(2)	
+time.sleep(2)
 signUpMobileNumberField = driver.find_element(By.ID, 'signUpMobileNumberField')
 webdriver.ActionChains(driver).move_to_element(signUpMobileNumberField).perform()
 driver.find_element(By.ID, "signUpMobileNumberField").send_keys(customerMobileNumber)
 print("Step25: On SignUp Page, enter Mobile Number")
-time.sleep(2)	
+time.sleep(2)
 creditCardNumberField = driver.find_element(By.ID, 'creditCardNumberField')
 webdriver.ActionChains(driver).move_to_element(creditCardNumberField).perform()
 driver.find_element(By.ID, "creditCardNumberField").send_keys(customerCreditCardNumber)
 print("Step26: On SignUp Page, enter Credit Card Number")
-time.sleep(2)	
+time.sleep(2)
 creditCardExpirationField = driver.find_element(By.ID, 'creditCardExpirationField')
 webdriver.ActionChains(driver).move_to_element(creditCardExpirationField).perform()
 driver.find_element(By.ID, "creditCardExpirationField").send_keys("4/26")
@@ -364,7 +364,7 @@ emailHeapTrackJson = {
     'properties': {'Transactional Email Subject': 'This Month with Play!', 'Transactional Email Variation': '' + emailVersion + ''},
 }
 email_json_data = json.dumps(emailHeapTrackJson)
-emailConn.request('POST', '/api/track', email_json_data, headers) 
+emailConn.request('POST', '/api/track', email_json_data, headers)
 time.sleep(1)
 print("Step33: Send Offline Email Event")
 time.sleep(5)

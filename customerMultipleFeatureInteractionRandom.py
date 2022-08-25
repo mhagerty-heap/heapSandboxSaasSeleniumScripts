@@ -39,7 +39,7 @@ randomSaasFeatureSelection = random.randint(1,16) # value for determining which 
 #randomSaasFeatureSelection = 13 # used for debugging
 
 # set UTM Codes for starting page
-startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/signin.html?sessionReplay=true&sessionReplayName=saasAppJourneyWithActions"
+startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/signin.html?sessionReplay=true&sessionReplayName=customerMultipleFeatureInteractionRandom"
 
 # set Agent String for session
 # if randomTrafficPatternSelection is 0 through 9 set user agent code accordingly
