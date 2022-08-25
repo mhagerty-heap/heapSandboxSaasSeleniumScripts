@@ -5,9 +5,6 @@ import http.client
 import datetime
 from datetime import date
 from selenium import webdriver
-#from aws_synthetics.selenium import synthetics_webdriver as webdriver
-#from aws_synthetics.selenium import synthetics_webdriver
-#from aws_synthetics.common import synthetics_logger
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
