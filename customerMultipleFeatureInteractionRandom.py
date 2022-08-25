@@ -50,9 +50,9 @@ userAgentString = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.
 
 # start webdriver
 options = webdriver.ChromeOptions()
-# options.add_argument('--headless')
-# options.add_argument('--no-sandbox')
-# options.add_argument('--disable-dev-shm-usage')
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
 options.add_argument('user-agent=' + userAgentString)
 driver = webdriver.Chrome(options = options)
 user_agent = driver.execute_script("return navigator.userAgent;")
