@@ -24,9 +24,9 @@ print("Heap envID = " + heapEnv)
 
 # open heapCustomerPersonas.json file, randomly selected 1 out of 1000 personas, populate persona variables
 randomPersonaSelector = random.randint(0,999) # used to select from the 1000 fake personas within heapCustomerPersonas.json
-with open('heapSaaSAppUserPersonas.json', 'r') as f: # open file from same dir where script runs
+with open('heapCustomerPersonas.json', 'r') as f: # open file from same dir where script runs
   customerData = json.load(f)
-# set customer variables based on data imported from heapCustomerPersonas.jsom  
+# set customer variables based on data imported from heapCustomerPersonas.jsom
 customerName = customerData[randomPersonaSelector]['customerName']
 print("customerName = " + customerName)
 customerEmail = customerData[randomPersonaSelector]['customerEmail']
@@ -48,7 +48,7 @@ startingUrlWithUtmCodes = "https://heap-sandbox-saas.vercel.app/signin.html?sess
 # if randomTrafficPatternSelection is 0 through 9 set user agent code accordingly
 userAgentString = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 
-# start webdriver 
+# start webdriver
 options = webdriver.ChromeOptions()
 # options.add_argument('--headless')
 # options.add_argument('--no-sandbox')
@@ -123,7 +123,7 @@ time.sleep(1)
 print("Sent Offline User Properties, Account Name, Customer Name, Subscribed Plan")
 
 #Start of Feature Interactions
-#Form Layout 
+#Form Layout
 #Enters first ane last name test data in the Inline FirstName LastName fields and 1 out of 4 selects Submit button
 if(randomSaasFeatureSelection == 1):
     print("randomSaasFeatureSelection = " + str(randomSaasFeatureSelection) + ", Form Layout")
@@ -171,7 +171,7 @@ if(randomSaasFeatureSelection == 1):
         print("Click Form Layout inlineButton")
         time.sleep(2)
 
-#Input 
+#Input
 #Scrolls down page and selects SelectButton Option1 & Option2 & 1 out of 4 selects Option3
 elif(randomSaasFeatureSelection == 2):
     print("randomSaasFeatureSelection = " + str(randomSaasFeatureSelection) + ", Input")
@@ -217,7 +217,7 @@ elif(randomSaasFeatureSelection == 2):
         print ("Click SelectButton option3")
         time.sleep(2)
 
-#Float Label 
+#Float Label
 #Selects New York and Rome from MultiSelect menu, 1 out of 4 then closes menu
 elif(randomSaasFeatureSelection == 3):
     print("randomSaasFeatureSelection = " + str(randomSaasFeatureSelection) + ", Float Label")
@@ -330,7 +330,7 @@ elif(randomSaasFeatureSelection == 5):
     time.sleep(2)
     outlinedPrimaryButton.click()
     print ("Click outlinedPrimaryButton")
-    time.sleep(2)    
+    time.sleep(2)
     outlinedSecondaryButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(1) > div:nth-child(4) > button.p-button.p-component.p-button-outlined.p-button-secondary.mr-2.mb-2")
     time.sleep(2)
     webdriver.ActionChains(driver).move_to_element(outlinedSecondaryButton).perform()
@@ -338,7 +338,7 @@ elif(randomSaasFeatureSelection == 5):
     time.sleep(2)
     outlinedSecondaryButton.click()
     print ("Click outlinedSecondaryButton")
-    time.sleep(2) 
+    time.sleep(2)
     randomAdditionalAction = random.randint(1,4)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select additional Danger button")
     #randomAdditionalAction = 4 # for debugging
@@ -468,7 +468,7 @@ elif(randomSaasFeatureSelection == 8):
     print("move_to_element expandAllDocumentsButton")
     time.sleep(2)
     expandAllDocumentsButton.click()
-    print ("Click expandAllDocumentsButton")    
+    print ("Click expandAllDocumentsButton")
     time.sleep(2)
     selectAllEventsButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(1) > div > div > ul > li:nth-child(2) > div > div > div")
     time.sleep(2)
@@ -484,7 +484,7 @@ elif(randomSaasFeatureSelection == 8):
     print("move_to_element expandAllEventsButton")
     time.sleep(2)
     expandAllEventsButton.click()
-    print ("Click expandAllEventsButton")    
+    print ("Click expandAllEventsButton")
     time.sleep(2)
 
     randomAdditionalAction = random.randint(1,4)
@@ -505,8 +505,8 @@ elif(randomSaasFeatureSelection == 8):
         print("move_to_element expandAllMoviesButton")
         time.sleep(2)
         expandAllMoviesButton.click()
-        print ("Click expandAllMoviesButton")    
-        time.sleep(2)    
+        print ("Click expandAllMoviesButton")
+        time.sleep(2)
 
 #Panel
 # expands header2 and 1 out of 4 will expand header3
@@ -524,7 +524,7 @@ elif(randomSaasFeatureSelection == 9):
     print("move_to_element expandHeaderTwo")
     time.sleep(2)
     expandHeaderTwo.click()
-    print ("Click expandHeaderTwo")    
+    print ("Click expandHeaderTwo")
     time.sleep(3)
 
     randomAdditionalAction = random.randint(1,4)
@@ -537,8 +537,8 @@ elif(randomSaasFeatureSelection == 9):
         print("move_to_element expandHeaderThree")
         time.sleep(2)
         expandHeaderThree.click()
-        print ("Click expandHeaderThree")    
-        time.sleep(2)    
+        print ("Click expandHeaderThree")
+        time.sleep(2)
 
 #Overlay
 # opens DataTable, sorts by price, 1/4 will close DataTable window
@@ -557,7 +557,7 @@ elif(randomSaasFeatureSelection == 10):
     time.sleep(2)
     dataTable.click()
     time.sleep(2)
-    print ("Click dataTable")    
+    print ("Click dataTable")
     sortByPrice = driver.find_element(By.CSS_SELECTOR, "#overlay_panel > div > div > div.p-datatable-wrapper > table > thead > tr > th:nth-child(3)")
     time.sleep(2)
     webdriver.ActionChains(driver).move_to_element(sortByPrice).perform()
@@ -577,7 +577,7 @@ elif(randomSaasFeatureSelection == 10):
         print("move_to_element closeDataTable")
         time.sleep(2)
         closeDataTable.click()
-        print ("Click closeDataTable")        
+        print ("Click closeDataTable")
         time.sleep(2)
 
 #Media
@@ -596,10 +596,10 @@ elif(randomSaasFeatureSelection == 11):
     print("move_to_element rightArrowCarouselButton")
     time.sleep(2)
     rightArrowCarouselButton.click()
-    print ("Click rightArrowCarouselButton") 
-    time.sleep(2)   
+    print ("Click rightArrowCarouselButton")
+    time.sleep(2)
     rightArrowCarouselButton.click()
-    print ("Click rightArrowCarouselButton") 
+    print ("Click rightArrowCarouselButton")
     time.sleep(2)
 
     randomAdditionalAction = random.randint(1,4)
@@ -607,7 +607,7 @@ elif(randomSaasFeatureSelection == 11):
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also close DataTable modal
         rightArrowCarouselButton.click()
-        print ("Click rightArrowCarouselButton") 
+        print ("Click rightArrowCarouselButton")
         time.sleep(2)
 
 #Menu
@@ -626,7 +626,7 @@ elif(randomSaasFeatureSelection == 12):
     print("move_to_element oneButton")
     time.sleep(2)
     oneButton.click()
-    print ("Click oneButton") 
+    print ("Click oneButton")
     time.sleep(2)
     twoButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(3) > div > div.p-steps.p-component > ul > li:nth-child(2) > a > span.p-steps-number")
     time.sleep(2)
@@ -634,15 +634,15 @@ elif(randomSaasFeatureSelection == 12):
     print("move_to_element twoButton")
     time.sleep(2)
     twoButton.click()
-    print ("Click twoButton") 
-    time.sleep(2) 
+    print ("Click twoButton")
+    time.sleep(2)
     threeButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(3) > div > div.p-steps.p-component > ul > li:nth-child(3) > a > span.p-steps-number")
     time.sleep(2)
     webdriver.ActionChains(driver).move_to_element(threeButton).perform()
     print("move_to_element threeButton")
     time.sleep(2)
     threeButton.click()
-    print ("Click threeButton") 
+    print ("Click threeButton")
     time.sleep(2)
 
     randomAdditionalAction = random.randint(1,4)
@@ -655,8 +655,8 @@ elif(randomSaasFeatureSelection == 12):
         print("move_to_element fourButton")
         time.sleep(2)
         fourButton.click()
-        print ("Click fourButton") 
-        time.sleep(2)                
+        print ("Click fourButton")
+        time.sleep(2)
 
 #Message
 # Select Toast Success then Info then Warn then 1/4 will select Error
@@ -674,7 +674,7 @@ elif(randomSaasFeatureSelection == 13):
     print("move_to_element toastSuccessButton")
     time.sleep(2)
     toastSuccessButton.click()
-    print ("Click toastSuccessButton") 
+    print ("Click toastSuccessButton")
     time.sleep(2)
     toastInfoButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(1) > div > button.p-button.p-component.p-button-info.mr-2")
     time.sleep(2)
@@ -682,15 +682,15 @@ elif(randomSaasFeatureSelection == 13):
     print("move_to_element toastInfoButton")
     time.sleep(2)
     toastInfoButton.click()
-    print ("Click toastInfoButton") 
-    time.sleep(2) 
+    print ("Click toastInfoButton")
+    time.sleep(2)
     toastWarnButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(1) > div > button.p-button.p-component.p-button-warning.mr-2")
     time.sleep(2)
     webdriver.ActionChains(driver).move_to_element(toastWarnButton).perform()
     print("move_to_element toastWarnButton")
     time.sleep(2)
     toastWarnButton.click()
-    print ("Click toastWarnButton") 
+    print ("Click toastWarnButton")
     time.sleep(2)
 
     randomAdditionalAction = random.randint(1,4)
@@ -703,8 +703,8 @@ elif(randomSaasFeatureSelection == 13):
         print("move_to_element toastErrorButton")
         time.sleep(2)
         toastErrorButton.click()
-        print ("Click toastErrorButton") 
-        time.sleep(2) 
+        print ("Click toastErrorButton")
+        time.sleep(2)
 
 #File
 #Select Advanced Choose button
@@ -722,7 +722,7 @@ elif(randomSaasFeatureSelection == 14):
     print("move_to_element advancedChooseButton")
     time.sleep(2)
     advancedChooseButton.click()
-    print ("Click advancedChooseButton") 
+    print ("Click advancedChooseButton")
     time.sleep(2)
 
 #Misc
@@ -741,7 +741,7 @@ elif(randomSaasFeatureSelection == 15):
     print("move_to_element emailsButton")
     time.sleep(2)
     emailsButton.click()
-    print ("Click emailsButton") 
+    print ("Click emailsButton")
     time.sleep(2)
     messagesButton = driver.find_element(By.CSS_SELECTOR, "#root > div > div.layout-main-container > div.layout-main > div > div:nth-child(2) > div:nth-child(1) > button.p-button.p-component.p-button-warning")
     time.sleep(2)
@@ -749,7 +749,7 @@ elif(randomSaasFeatureSelection == 15):
     print("move_to_element messagesButton")
     time.sleep(2)
     messagesButton.click()
-    print ("Click messagesButton") 
+    print ("Click messagesButton")
     time.sleep(2)
 
 #Cog wheel UI Menu
@@ -761,7 +761,7 @@ else:
     print("move_to_element cogWheel")
     time.sleep(2)
     cogWheel.click()
-    print ("Click cogWheel") 
+    print ("Click cogWheel")
     time.sleep(2)
 
     boostrapButtonOne = driver.find_element(By.CSS_SELECTOR, "#layout-config > div > div:nth-child(11) > div:nth-child(2) > button")
@@ -770,7 +770,7 @@ else:
     print("move_to_element boostrapButtonOne")
     time.sleep(2)
     boostrapButtonOne.click()
-    print ("Click boostrapButtonOne") 
+    print ("Click boostrapButtonOne")
     time.sleep(2)
 
     boostrapButtonTwo = driver.find_element(By.CSS_SELECTOR, "#layout-config > div > div:nth-child(11) > div:nth-child(3) > button")
@@ -779,7 +779,7 @@ else:
     print("move_to_element boostrapButtonTwo")
     time.sleep(2)
     boostrapButtonTwo.click()
-    print ("Click boostrapButtonTwo") 
+    print ("Click boostrapButtonTwo")
     time.sleep(2)
 
     boostrapButtonThree = driver.find_element(By.CSS_SELECTOR, "#layout-config > div > div:nth-child(11) > div:nth-child(4) > button")
@@ -788,7 +788,7 @@ else:
     print("move_to_element boostrapButtonThree")
     time.sleep(2)
     boostrapButtonThree.click()
-    print ("Click boostrapButtonThree") 
+    print ("Click boostrapButtonThree")
     time.sleep(2)
 
     closeCogMenuButton = driver.find_element(By.CSS_SELECTOR, "#layout-config > button.p-button.p-component.p-button-danger.layout-config-close.p-button-rounded.p-button-text.p-button-icon-only")
@@ -797,15 +797,9 @@ else:
     print("move_to_element closeCogMenuButton")
     time.sleep(2)
     closeCogMenuButton.click()
-    print ("Click closeCogMenuButton") 
-    time.sleep(2)    
+    print ("Click closeCogMenuButton")
+    time.sleep(2)
 
 driver.delete_all_cookies()
 driver.quit()
 print("Journey Complete")
-
-
-
-
-
-
