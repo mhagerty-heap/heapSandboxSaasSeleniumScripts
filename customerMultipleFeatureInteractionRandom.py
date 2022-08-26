@@ -200,7 +200,7 @@ elif(randomSaasFeatureSelection == 2):
     print ("Click SelectButton option2")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,5)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select Option3 button")
     #randomAdditionalAction = 1 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select the Options3 button
@@ -249,7 +249,7 @@ elif(randomSaasFeatureSelection == 3):
     print ("Click Rome")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,6)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select close menu button")
     #randomAdditionalAction = 1 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select the close button
@@ -336,7 +336,7 @@ elif(randomSaasFeatureSelection == 5):
     outlinedSecondaryButton.click()
     print ("Click outlinedSecondaryButton")
     time.sleep(2)
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,5)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select additional Danger button")
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select the Danger button
@@ -386,7 +386,7 @@ elif(randomSaasFeatureSelection == 6):
     print ("Click applyButton")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,6)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will clear the selection")
     #randomAdditionalAction = 1 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also clear the selection
@@ -484,7 +484,7 @@ elif(randomSaasFeatureSelection == 8):
     print ("Click expandAllEventsButton")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,5)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select and expand movies")
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select and expand movies
@@ -524,7 +524,7 @@ elif(randomSaasFeatureSelection == 9):
     print ("Click expandHeaderTwo")
     time.sleep(3)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,6)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select and expand header3")
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select and expand header3
@@ -599,7 +599,7 @@ elif(randomSaasFeatureSelection == 11):
     print ("Click rightArrowCarouselButton")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,5)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will close DataTable modal")
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also close DataTable modal
@@ -642,7 +642,7 @@ elif(randomSaasFeatureSelection == 12):
     print ("Click threeButton")
     time.sleep(2)
 
-    randomAdditionalAction = random.randint(1,4)
+    randomAdditionalAction = random.randint(1,6)
     print("randomAdditionalAction = " + str(randomAdditionalAction) + ", 4 will select 4th option")
     #randomAdditionalAction = 4 # for debugging
     if(randomAdditionalAction == 4): # if 4 is the random number, also select 4th option
